@@ -39,3 +39,9 @@ Route::put('/photos/{id}/like', 'PhotoController@like')->name('photo.like');
 
 // いいね解除
 Route::delete('/photos/{id}/like', 'PhotoController@unlike');
+
+
+// ログインユーザー
+Route::get('/user', function () {
+    return Auth::user();
+})->name('user');
